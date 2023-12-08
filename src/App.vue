@@ -8,7 +8,10 @@ import Card from '@/components/card/Card.vue'
   </header>
 
   <main></main>
-  <Card heading="FAQs" />
+  <Card
+    description="Frontend Mentor challenges allow you to improve your skills in a real-life workflow."
+    heading="FAQs"
+  />
 </template>
 
 <style scoped>

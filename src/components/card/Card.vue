@@ -3,10 +3,15 @@ import { FwbCard } from 'flowbite-vue'
 
 interface Props {
   heading: string
+  description: string
 }
 
 const props: Props = defineProps({
   heading: {
+    type: String,
+    required: true
+  },
+  description: {
     type: String,
     required: true
   }
@@ -20,7 +25,7 @@ const props: Props = defineProps({
         {{ props.heading }}
       </h5>
       <p class="font-normal text-gray-700 dark:text-gray-400">
-        Frontend Mentor challenges allow you to improve your skills in a real-life workflow.
+        {{ props.description }}
       </p>
     </div>
   </fwb-card>
