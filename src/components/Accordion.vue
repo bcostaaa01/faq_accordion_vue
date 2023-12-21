@@ -6,27 +6,6 @@ import {
   FwbAccordionPanel
 } from 'flowbite-vue'
 
-interface Props {
-  heading: string
-  description: string
-  icon: string
-}
-
-const props: Props = defineProps({
-  heading: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String,
-    required: true
-  },
-  icon: {
-    type: String,
-    required: true
-  }
-})
-
 const installationDocumentation = {
   introduction: [
     'First, install Flowbite from npm:',
@@ -35,7 +14,7 @@ const installationDocumentation = {
   ]
 }
 
-const accordionPropValues = [
+const accordionValues = [
   {
     heading: 'What is Flowbite?',
     description:
@@ -61,7 +40,7 @@ const accordionPropValues = [
 
 <template>
   <fwb-accordion>
-    <fwb-accordion-panel v-for="(item, index) in accordionPropValues" :key="index">
+    <fwb-accordion-panel v-for="(item, index) in accordionValues" :key="index">
       <fwb-accordion-header class="text-xl font-semibold text-slate-900 dark:text-gray-100">
         {{ item.heading }}
       </fwb-accordion-header>
