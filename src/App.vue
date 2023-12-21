@@ -20,7 +20,7 @@ import Faqs_accordion from '@/components/faqs/faqs_accordion.vue'
 
 <style scoped>
 .background-image-section {
-  background-image: url('src/assets/images/background-pattern-desktop.svg');
+  background-image: url('./assets/images/background-pattern-desktop.svg');
   background-size: cover;
   background-position: center;
   height: 50vh;
