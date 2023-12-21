@@ -1,34 +1,37 @@
 <script lang="ts" setup>
-import Card from '@/components/card/Card.vue'
+import Faqs_accordion from '@/components/faqs/faqs_accordion.vue'
 </script>
 
 <template>
-  <header class="wrapper">
-    <div></div>
-  </header>
+  <div>
+    <section class="background-image-section">
+      <header></header>
+    </section>
 
-  <main></main>
-  <Card
-    description="Frontend Mentor challenges allow you to improve your skills in a real-life workflow."
-    heading="FAQs"
-  />
+    <section class="bg-pink-100">
+      <main class="flex items-center justify-center min-h-screen">
+        <div class="wrapper">
+          <Faqs_accordion />
+        </div>
+      </main>
+    </section>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+.background-image-section {
+  background-image: url('src/assets/images/background-pattern-desktop.svg');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  .background-image-section {
+    height: 25vh; /* Adjust the height as needed */
   }
 }
 </style>
